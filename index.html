@@ -6,9 +6,28 @@
     <meta name="viewport" content="width=device-width">
 
     <title>Silly story generator</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
     <style>
-      p {
+
+    body {
+      font-family: helvetica, sans-serif;
+      width: 350px;
+    }
+
+    label {
+      font-weight: bold;  
+    }
+
+    div {
+      padding-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      width: 150px;
+    }
+
+    p {
       background: #FFC125;
       color: #5E2612;
       padding: 10px;
@@ -16,25 +35,27 @@
     }
 
     </style>
-   
   </head>
 
-  <body class="h-screen bg-green-600 text-white text-center grid place-items-center">
+  <body>
     <div>
-      <label class="font-bold text-6xl leading-none italic" for="customname">Enter custom name:</label>
-      <input class="rounded-lg px-10 py-4 text-black" id="customname" type="text" placeholder="">
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="">
     </div>
     <div>
-      <label class="font-mono text-lg text-4xl" for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
-      <label class="font-mono text-lg text-4xl" for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
+      <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
+      <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
     </div>
     <div>
-      <button class="bg-white rounded-lg px-8 py-4 text-black" class="randomize">Generate random story</button>
+      <button class="randomize">Generate random story</button>
     </div>
     <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
     <p class="story"></p>
     
-    <script src="main.js"></script>
+    <script>
+      src="main.js"
+    </script>
+
     
   </body>
 </html>
